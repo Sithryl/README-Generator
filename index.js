@@ -12,44 +12,49 @@ const generateREADME = ({
   questions,
 }) =>
   //`${badges}
-    `#${title}
+    `# ${title}
 
-    ## Description
+## Description
 
-    ${description}
+${description}
 
-    ## Table of Contents
+## Table of Contents
 
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Credits](#credits)
-    - [Test](#test)
-    - [Questions](#questions)
+-[Installation](#installation)
 
-    ## Installation
+-[Usage](#usage)
 
-    ${install}
+-[License](#license)
 
-    ## Usage
+-[Credits](#credits)
 
-    ${usage}
+-[Test](#test)
 
-    ## License
+-[Questions](#questions)
 
-    ${license}
+## Installation
 
-    ## Credits
+${install}
 
-    ${credit}
+## Usage
 
-    ## Test
+${usage}
 
-    ${tests}
+## License
 
-    ## Questions
+${license}
 
-    Contact me at ${questions}`;
+## Credits
+
+${credit}
+
+## Test
+
+Add a preview here
+
+## Questions
+
+Contact me at ${questions}`;
 
 inquirer
   .prompt([
@@ -61,7 +66,7 @@ inquirer
     {
       type: "input",
       name: "description",
-      message: "What is a brief description of you application?",
+      message: "What is a brief description of your application?",
     },
     {
       type: "input",
