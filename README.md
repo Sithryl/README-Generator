@@ -34,7 +34,7 @@ All me!
 
 ## Test
 
-Add a preview here
+[!Alt text](./assets/readmeterminal.png)
 
 ## Questions
 
