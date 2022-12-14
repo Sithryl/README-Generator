@@ -11,19 +11,19 @@ function renderLicenseBadge(license) {
 
 function renderLicenceLink(license) {
   if (license === 'MIT') {
-    return `https://mit-license.org/`
+    return 'https://mit-license.org/'
   }
   if (license === 'Apache') {
-    return `https://www.apache.org/licenses/LICENSE-2.0.html`
+    return 'https://www.apache.org/licenses/LICENSE-2.0.html'
   }
   if (license === 'Boost') {
-    return `https://www.boost.org/users/license.html`
+    return 'https://www.boost.org/users/license.html'
   }
   if (license === 'Eclipse') {
-    return `https://www.eclipse.org/legal/epl-2.0/`
+    return 'https://www.eclipse.org/legal/epl-2.0/'
   }
   if (license === 'Mozilla') {
-    return `https://www.mozilla.org/en-US/MPL/`
+    return 'https://www.mozilla.org/en-US/MPL/'
   }
 }
 

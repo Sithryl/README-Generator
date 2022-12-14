@@ -1,9 +1,8 @@
-# awd
+# README Generator
 
 ## Description
-[!MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](undefined)
 
-awd
+An application that can help quickly generate a README file
 
 ## Table of Contents
 
@@ -21,19 +20,17 @@ awd
 
 ## Installation
 
-awd
+Requires nodejs
 
 ## Usage
 
-awd
+Ran through integrated terminal
 
 ## License
 
-MIT
-
 ## Credits
 
-awd
+All me!
 
 ## Test
 
@@ -41,4 +38,4 @@ Add a preview here
 
 ## Questions
 
-Contact me at awd
+Contact me at https://github.com/Sithryl
