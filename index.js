@@ -1,20 +1,47 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+function renderLicenseBadge(license) {
+  if (license) {
+    return `[!${license} license](https://img.shields.io/badge/License-${license}-blue.svg)](${renderLicenceLink(license)})`
+  } else {
+    return ''
+  }
+}
+
+function renderLicenceLink(license) {
+  if (license === 'MIT') {
+    return `https://mit-license.org/`
+  }
+  if (license === 'Apache') {
+    return `https://www.apache.org/licenses/LICENSE-2.0.html`
+  }
+  if (license === 'Boost') {
+    return `https://www.boost.org/users/license.html`
+  }
+  if (license === 'Eclipse') {
+    return `https://www.eclipse.org/legal/epl-2.0/`
+  }
+  if (license === 'Mozilla') {
+    return `https://www.mozilla.org/en-US/MPL/`
+  }
+}
+
 const generateREADME = ({
+  // input name values
   title,
   description,
   install,
   usage,
   license,
   credit,
-  tests,
   questions,
 }) =>
-  //`${badges}
-    `# ${title}
+  // README layout
+  `# ${title}
 
 ## Description
+${renderLicenseBadge(license)}
 
 ${description}
 
@@ -55,8 +82,8 @@ Add a preview here
 ## Questions
 
 Contact me at ${questions}`;
-
-inquirer
+// prompts for readme info
+const readmeInput = inquirer
   .prompt([
     {
       type: "input",
@@ -96,9 +123,10 @@ inquirer
       message: "Enter your Github URL.",
     },
   ])
+  // take answers and put them in the readme layout with success message
   .then((answers) => {
     const readmePageContent = generateREADME(answers);
-
+    // generate readme file
     fs.writeFile("README.md", readmePageContent, (err) =>
       err
         ? console.log(err)
