@@ -24,7 +24,7 @@ Requires nodejs
 
 ## Usage
 
-Ran through integrated terminal
+Ran through integrated terminal by using "node index"
 
 ## License
 
